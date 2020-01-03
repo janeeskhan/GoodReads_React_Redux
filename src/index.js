@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import { fetchGithubData } from './actions/index.js';
+// import { fetchGithubData } from './actions/index.js';
 import ArrayData from './reducers/githubReducer.js';
 
 import "bootstrap/dist/css/bootstrap.min.css";

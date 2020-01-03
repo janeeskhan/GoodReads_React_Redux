@@ -1,4 +1,5 @@
 import { FETCH_GITHUB_DATA } from './types';
+import {Data} from './types';
 const convert = require('xml-js');
 
 
@@ -14,9 +15,11 @@ export const fetchGithubData = (value) => {
     fetch (
       `https://www.goodreads.com/search/index.xml?key=l7qiXtcIr7A2PzHh726pBg&q=${value}`
       )
-
+     
       .then(async res => {
         const value = await res.text();
+       
+       
         const result = convert.xml2json(value, { compact: true });
         const myObj = JSON.parse(result);
         console.log(myObj);
@@ -35,6 +38,7 @@ export const fetchGithubData = (value) => {
 
       })
       .catch(error => {
+
         throw (error);
       });
       
